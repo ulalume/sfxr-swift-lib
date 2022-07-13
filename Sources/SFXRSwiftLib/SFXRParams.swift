@@ -35,6 +35,7 @@ public struct SFXRParams: CustomStringConvertible, Codable {
     case sine
     case noise
   }
+  public init () {}
   public var waveType: WaveType = .square
   
   public var baseFreq: Float = 0.3
