@@ -30,6 +30,7 @@ import AVFoundation
 
 @available(macOS 10.11, *)
 public class SFXRAudio {
+  public static let share = try! SFXRAudio()
   private let wavBits: Int = 16
   private let wavFreq: Int = 44100
   
@@ -121,7 +122,7 @@ public class SFXRAudio {
   
   private var audioUnit: AUAudioUnit
   
-  public init() throws {
+  init() throws {
     #if os(iOS)
     let componentSubType = kAudioUnitSubType_RemoteIO
     #elseif os(OSX)
