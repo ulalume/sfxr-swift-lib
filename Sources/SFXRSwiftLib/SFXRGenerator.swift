@@ -39,7 +39,7 @@ public class SFXRGenerator {
     case blipSelect
   }
 
-  class func mutate(params: SFXRParams) -> SFXRParams {
+  public class func mutate(params: SFXRParams) -> SFXRParams {
     var p = params
     if Bool.random() {
       p.baseFreq += Float.random(in: 0...0.1) - 0.05
@@ -111,7 +111,7 @@ public class SFXRGenerator {
     return p
   }
   
-  class func random(waveType: SFXRParams.WaveType?) -> SFXRParams {
+  public class func random(waveType: SFXRParams.WaveType?) -> SFXRParams {
     var p = SFXRParams()
     p.waveType = waveType ?? SFXRParams.WaveType.allCases.randomElement()!
     p.baseFreq = pow(Float.random(in: 0...2.0) - 1.0, 2.0)
@@ -162,7 +162,7 @@ public class SFXRGenerator {
     return p
   }
   
-  class func generate(generator: GeneratorType) -> SFXRParams {
+  public class func generate(generator: GeneratorType) -> SFXRParams {
     var p = SFXRParams()
     switch generator {
     case .pickupCoin:

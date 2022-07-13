@@ -34,7 +34,7 @@ public class SFXRAudio {
   
   private var p = SFXRParams()
   
-  var parameters: SFXRParams {
+  public var parameters: SFXRParams {
     get {
       return self.p
     }
@@ -75,8 +75,8 @@ public class SFXRAudio {
     }
   }
   
-  var soundVol: Float = 0.5
-  var masterVol: Float = 0.05
+  public var soundVol: Float = 0.5
+  public var masterVol: Float = 0.05
   
   private var phase: Int = 0
   private var fperiod: Double = 0.0
@@ -217,7 +217,7 @@ public class SFXRAudio {
     }
   }
   
-  func play() {
+  public func play() {
     playingSample = false
     resetSample(restart: false)
     playingSample = true
@@ -406,7 +406,7 @@ public class SFXRAudio {
     return framesWritten
   }
   
-  func exportWAV() -> Data {
+  public func exportWAV() -> Data {
     let bdata = BinaryData()
     bdata.append("RIFF")
     bdata.append(UInt32(0)) // remaining file size

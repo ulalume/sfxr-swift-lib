@@ -35,38 +35,38 @@ public struct SFXRParams: CustomStringConvertible, Codable {
     case sine
     case noise
   }
-  var waveType: WaveType = .square
+  public var waveType: WaveType = .square
   
-  var baseFreq: Float = 0.3
-  var freqLimit: Float = 0.0
-  var freqRamp: Float = 0.0 // bipolar
-  var freqDramp: Float = 0.0 // bipolar
-  var duty: Float = 0.0
-  var dutyRamp: Float = 0.0 // bipolar
+  public var baseFreq: Float = 0.3
+  public var freqLimit: Float = 0.0
+  public var freqRamp: Float = 0.0 // bipolar
+  public var freqDramp: Float = 0.0 // bipolar
+  public var duty: Float = 0.0
+  public var dutyRamp: Float = 0.0 // bipolar
   
-  var vibStrength: Float = 0.0
-  var vibSpeed: Float = 0.0
-  var vibDelay: Float = 0.0
+  public var vibStrength: Float = 0.0
+  public var vibSpeed: Float = 0.0
+  public var vibDelay: Float = 0.0
   
-  var envAttack: Float = 0.0
-  var envSustain: Float = 0.3
-  var envDecay: Float = 0.4
-  var envPunch: Float = 0.0
+  public var envAttack: Float = 0.0
+  public var envSustain: Float = 0.3
+  public var envDecay: Float = 0.4
+  public var envPunch: Float = 0.0
   
-  var filterOn: Bool = false
-  var lpfResonance: Float = 0.0
-  var lpfFreq: Float = 1.0
-  var lpfRamp: Float = 0.0 // bipolar
-  var hpfFreq: Float = 0.0
-  var hpfRamp: Float = 0.0 // bipolar
+  public var filterOn: Bool = false
+  public var lpfResonance: Float = 0.0
+  public var lpfFreq: Float = 1.0
+  public var lpfRamp: Float = 0.0 // bipolar
+  public var hpfFreq: Float = 0.0
+  public var hpfRamp: Float = 0.0 // bipolar
   
-  var phaOffset: Float = 0.0 // bipolar
-  var phaRamp: Float = 0.0 // bipolar
+  public var phaOffset: Float = 0.0 // bipolar
+  public var phaRamp: Float = 0.0 // bipolar
   
-  var repeatSpeed: Float = 0.0
+  public var repeatSpeed: Float = 0.0
   
-  var arpSpeed: Float = 0.0
-  var arpMod: Float = 0.0 // bipolar
+  public var arpSpeed: Float = 0.0
+  public var arpMod: Float = 0.0 // bipolar
   
   public var description: String {
     return "baseFreq=\(baseFreq), freqLimit=\(freqLimit), freqRamp=\(freqRamp), " +
