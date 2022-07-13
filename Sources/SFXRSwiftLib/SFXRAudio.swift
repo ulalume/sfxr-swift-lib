@@ -28,6 +28,7 @@
 import AudioToolbox
 import AVFoundation
 
+@available(macOS 10.11, *)
 public class SFXRAudio {
   private let wavBits: Int = 16
   private let wavFreq: Int = 44100
