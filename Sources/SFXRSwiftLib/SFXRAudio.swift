@@ -121,7 +121,7 @@ public class SFXRAudio {
   
   private var audioUnit: AUAudioUnit
   
-  init() throws {
+  public init() throws {
     #if os(iOS)
     let componentSubType = kAudioUnitSubType_RemoteIO
     #elseif os(OSX)
