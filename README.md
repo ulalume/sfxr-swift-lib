@@ -1,3 +1,3 @@
 # SFXRSwiftLib
 
-A description of this package.
+iOS/ macOS sfxr library
