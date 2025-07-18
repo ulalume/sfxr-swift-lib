@@ -26,7 +26,7 @@
 
 import Foundation
 
-class BinaryData {
+internal class BinaryData {
     var data = Data()
     
     init() {}
