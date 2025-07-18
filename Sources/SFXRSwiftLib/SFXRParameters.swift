@@ -6,7 +6,7 @@ public enum WaveType: Int {
     case sine = 2
     case noise = 3
     
-    var label: String {
+    public var label: String {
         switch self {
         case .square: return "Square"
         case .sawtooth: return "Sawtooth"
@@ -26,7 +26,7 @@ public enum GeneratorType: Int {
     case jump = 5
     case blipSelect = 6
     
-    var label: String {
+    public var label: String {
         switch self {
         case .pickupCoin: return "Pickup/Coin"
         case .laserShoot: return "Laser/Shoot"
@@ -37,7 +37,7 @@ public enum GeneratorType: Int {
         case .blipSelect: return "Blip/Select"
         }
     }
-    var systemImage: String {
+    public var systemImage: String {
         switch self {
         case .pickupCoin: return "dollarsign.circle.fill"
         case .laserShoot: return "bolt.fill"
@@ -59,33 +59,33 @@ fileprivate func frnd(_ range: Float) -> Float {
 }
 
 public struct SFXRParameters {
-    var waveType: WaveType = .sine
-    var soundVol: Float = 0.5
-    var masterVol: Float = 0.05
-    var baseFreq: Float = 0.3
-    var freqLimit: Float = 0.0
-    var freqRamp: Float = 0.0
-    var freqDramp: Float = 0.0
-    var duty: Float = 0.0
-    var dutyRamp: Float = 0.0
-    var vibStrength: Float = 0.0
-    var vibSpeed: Float = 0.0
-    var vibDelay: Float = 0.0
-    var envAttack: Float = 0.0
-    var envSustain: Float = 0.3
-    var envDecay: Float = 0.4
-    var envPunch: Float = 0.0
-    var filterOn: Bool = false
-    var lpfResonance: Float = 0.0
-    var lpfFreq: Float = 1.0
-    var lpfRamp: Float = 0.0
-    var hpfFreq: Float = 0.0
-    var hpfRamp: Float = 0.0
-    var phaOffset: Float = 0.0
-    var phaRamp: Float = 0.0
-    var repeatSpeed: Float = 0.0
-    var arpSpeed: Float = 0.0
-    var arpMod: Float = 0.0
+    public var waveType: WaveType = .sine
+    public var soundVol: Float = 0.5
+    public var masterVol: Float = 0.05
+    public var baseFreq: Float = 0.3
+    public var freqLimit: Float = 0.0
+    public var freqRamp: Float = 0.0
+    public var freqDramp: Float = 0.0
+    public var duty: Float = 0.0
+    public var dutyRamp: Float = 0.0
+    public var vibStrength: Float = 0.0
+    public var vibSpeed: Float = 0.0
+    public var vibDelay: Float = 0.0
+    public var envAttack: Float = 0.0
+    public var envSustain: Float = 0.3
+    public var envDecay: Float = 0.4
+    public var envPunch: Float = 0.0
+    public var filterOn: Bool = false
+    public var lpfResonance: Float = 0.0
+    public var lpfFreq: Float = 1.0
+    public var lpfRamp: Float = 0.0
+    public var hpfFreq: Float = 0.0
+    public var hpfRamp: Float = 0.0
+    public var phaOffset: Float = 0.0
+    public var phaRamp: Float = 0.0
+    public var repeatSpeed: Float = 0.0
+    public var arpSpeed: Float = 0.0
+    public var arpMod: Float = 0.0
 }
 
 // Data Export / Import
@@ -122,7 +122,7 @@ extension SFXRParameters {
         bdata.append(self.arpMod)
         return bdata.data
     }
-    init(from data: Data) {
+    public init(from data: Data) {
         self.init()
         let bdata = BinaryData(data: data)
         var pos = 0
