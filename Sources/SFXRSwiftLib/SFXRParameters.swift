@@ -1,55 +1,5 @@
 import Foundation
 
-public enum WaveType: Int {
-    case square = 0
-    case sawtooth = 1
-    case sine = 2
-    case noise = 3
-    
-    public var label: String {
-        switch self {
-        case .square: return "Square"
-        case .sawtooth: return "Sawtooth"
-        case .sine: return "Sine"
-        case .noise: return "Noise"
-        }
-    }
-}
-extension WaveType: RawRepresentable, CaseIterable {}
-
-public enum GeneratorType: Int {
-    case pickupCoin = 0
-    case laserShoot = 1
-    case explosion = 2
-    case powerup = 3
-    case hitHurt = 4
-    case jump = 5
-    case blipSelect = 6
-    
-    public var label: String {
-        switch self {
-        case .pickupCoin: return "Pickup/Coin"
-        case .laserShoot: return "Laser/Shoot"
-        case .explosion: return "Explosion"
-        case .powerup: return "Powerup"
-        case .hitHurt: return "Hit/Hurt"
-        case .jump: return "Jump"
-        case .blipSelect: return "Blip/Select"
-        }
-    }
-    public var systemImage: String {
-        switch self {
-        case .pickupCoin: return "dollarsign.circle.fill"
-        case .laserShoot: return "bolt.fill"
-        case .explosion: return "flame.fill"
-        case .powerup: return "star.fill"
-        case .hitHurt: return "seal.fill"
-        case .jump: return "shoe.fill"
-        case .blipSelect: return "checkmark.circle.fill"
-        }
-    }
-}
-extension GeneratorType: CaseIterable {}
 
 fileprivate func rnd(_ range: Int) -> Int {
     Int.random(in: 0...range)
@@ -59,6 +9,21 @@ fileprivate func frnd(_ range: Float) -> Float {
 }
 
 public struct SFXRParameters {
+    public enum WaveType: Int {
+        case square = 0
+        case sawtooth = 1
+        case sine = 2
+        case noise = 3
+    }
+    public enum GeneratorType: Int {
+        case pickupCoin = 0
+        case laserShoot = 1
+        case explosion = 2
+        case powerup = 3
+        case hitHurt = 4
+        case jump = 5
+        case blipSelect = 6
+    }
     public var waveType: WaveType = .sine
     public var soundVol: Float = 0.5
     public var masterVol: Float = 0.05
