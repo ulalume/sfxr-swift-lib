@@ -122,8 +122,11 @@ extension SFXRParameters {
         bdata.append(self.arpMod)
         return bdata.data
     }
-    public init(from data: Data) {
+    public init(from data: Data? = nil) {
         self.init()
+        guard let data else {
+            return
+        }
         let bdata = BinaryData(data: data)
         var pos = 0
         let version: UInt32 = bdata.uint32(at: pos)
